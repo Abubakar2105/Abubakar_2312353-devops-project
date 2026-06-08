@@ -39,7 +39,10 @@ jobs:
 
       - name: Run flake8 linting
         run: flake8 app/ --max-line-length=100
-
+      
+      - name: Create missing db directory for SQLite
+        run: mkdir -p db
+        
       - name: Run pytest
         run: pytest app/tests/ -v
         env:

@@ -14,6 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY app/ ./app/
 
+RUN mkdir -p /app/db \
+    && chown appuser:appgroup /app/db
+
 # Switch to non-root user
 USER appuser
 
