@@ -1,6 +1,7 @@
 """
 pytest fixtures — sets up a fresh in-memory SQLite DB for each test session.
-The CI pipeline overrides DATABASE_URL with a real PostgreSQL service container.
+The CI pipeline overrides DATABASE_URL
+with a real PostgreSQL service container.
 """
 import pytest
 from fastapi.testclient import TestClient
@@ -14,8 +15,11 @@ from app.main import get_db
 # Use SQLite for local test runs; CI overrides with PostgreSQL
 TEST_DB_URL = "sqlite:///./test.db"
 
-engine = create_engine(TEST_DB_URL, connect_args={"check_same_thread": False})
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+engine = create_engine(TEST_DB_URL,
+                       connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False,
+                                   autoflush=False,
+                                   bind=engine)
 
 
 def override_get_db():
