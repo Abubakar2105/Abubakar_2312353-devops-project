@@ -13,7 +13,7 @@ from app.database import Base
 from app.main import get_db
 
 # Use SQLite for local test runs; CI overrides with PostgreSQL
-TEST_DB_URL = "sqlite:///./test.db"
+TEST_DB_URL = "sqlite:///./db/test.db"
 
 engine = create_engine(TEST_DB_URL,
                        connect_args={"check_same_thread": False})
