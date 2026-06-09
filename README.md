@@ -3,7 +3,7 @@
 > **Student Name:** BSCS-2312353
 > **Student ID:** Abu Bakar Ashrafi
 > **Course:** DevOps Fundamentals
-> **Live URL:** http://YOUR_EC2_IP:8000
+> **Live URL:** http://54.146.242.170:8000
 
 ---
 
