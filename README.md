@@ -68,12 +68,12 @@ curl http://localhost:8000/students
 ssh -i your-key.pem ubuntu@YOUR_EC2_IP
 
 # Install Docker
-sudo apt update && sudo apt install -y docker.io docker-compose-plugin
+sudo apt update && sudo apt install -y docker.io docker-compose-plugin docker-compose
 sudo usermod -aG docker ubuntu
 
 # Clone and run
 git clone https://github.com/Abubakar2105/Abubakar_2312353-devops-project.git
-cd ~/2312353-devops-project
+cd ~/Abubakar_2312353-devops-project
 cp .env.example .env   # Edit with production values
 docker compose -f docker-compose.prod.yml up -d --build
 ```
