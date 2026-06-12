@@ -34,7 +34,7 @@ GitHub Push
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Abubakar2105/Abubakar_2312353-devops-project.git
-cd 2312353-devops-project
+cd Abubakar_2312353-devops-project
 
 # 2. Create your .env file
 cp .env.example .env
